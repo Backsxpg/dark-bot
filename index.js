@@ -131,7 +131,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["https://wa.me/556196333905"] // replace this with your number
+			const ownerNumber = ["556196333905@s.whatsapp.net"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -323,27 +323,27 @@ async function starts() {
 					})
 					break
 				case 'ecchi':
-					meme = await kagApi.ecchi()
+					ecchi = await kagApi.ecchi()
 					buffer = await getBuffer(`https://imgur.com/${anime ecchi.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
 				case 'neko':
-					memein = await kagApi.neko()
+					neko = await kagApi.neko()
 					buffer = await getBuffer(`https://imgur.com/${neko.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
 				case 'lolicon':
-					memein = await kagApi.lolicon()
+					lolicon = await kagApi.lolicon()
 					buffer = await getBuffer(`https://imgur.com/${loli.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
 				case 'anime':
-					memein = await kagApi.memeindo()
+					anime = await kagApi.memeindo()
 					buffer = await getBuffer(`https://imgur.com/${anime.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
 				case 'sexy':
-					memein = await kagApi.memeindo()
+					sexy = await kagApi.memeindo()
 					buffer = await getBuffer(https://www.tumblr.com/tagged/{sensuais.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
