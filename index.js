@@ -131,7 +131,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["556196333905@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["https://wa.me/556196333905"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -358,14 +358,6 @@ async function starts() {
 						if (err) return reply('❌ *ERRO* ❌')
 						buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'FBI ta vindo ai'})
-					})
-					break
-				case 'nsfwloli':
-					if (!isNsfw) return reply('❌ *FALSO* ❌')
-					loli.getNSFWLoli(async (err, res) => {
-						if (err) return reply('❌ *ERRO* ❌')
-						buffer = await getBuffer(res.url)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'gg jogador de rato'})
 					})
 					break
 				case 'hilih':
@@ -634,7 +626,5 @@ async function starts() {
 		}
 	})
 }
-starts()
-
-
+start
 
